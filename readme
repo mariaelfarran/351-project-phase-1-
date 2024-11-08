@@ -1,0 +1,47 @@
+# 351-project-phase-1-
+
+The system uses Python’s built-in libraries such as sqlite3, socket, and hashlib to manage database interactions, network communication, and security.
+
+AUB Marketplace - Server-Client Application Overview. This project is a marketplace platform designed for AUB (American University of Beirut) students to buy and sell items. It uses a server-client architecture where clients can register, log in, view products, add products to the marketplace, and send messages to each other. The server handles all database operations and client requests, ensuring secure and efficient communication.
+
+The application uses socket programming to manage connections between clients, SQLite for the database, and threading to handle multiple clients simultaneously.
+The client needs to interact with the server by sending JSON messages containing various actions. Here are the available actions that the client can send to the server:
+
+"register": Registers a new user.
+"log in": Logs in an existing user.
+"display": Displays all products currently available for sale.
+"display": Displays products of a specific user.
+"send": Sends a message to another user.
+"buy": Buys a product by providing its name and id.
+"check": Checks whether a specific user is online.
+"add": Adds a new product to the marketplace.
+"view": Views a list of buyers who have purchased the current user's products.
+"messages": Fetches undelivered messages for the user.
+"exit": Logs out the user.
+
+The server will respond to these actions with JSON-encoded messages, providing feedback or the requested data.
+
+
+The SQLite database AUBoutique.db consists of the following tables:
+
+userInfo: Stores user details (email, username, password, and name).
+objForSell: Stores product information for sale (product name, seller username, price, description, image path, and product ID).
+log: Stores transaction logs (buyer, product, product ID, and seller).
+messages: Stores messages between users (sender, recipient, message text, and delivery status).
+
+
+
+
+  
+This project requires Python 3.11 and the following external libraries:
+Dependencies:
+socket: For network communication.
+sqlite3: For database storage.
+hashlib: For secure password hashing.
+re: For validating email format.
+json: For handling JSON data.
+threading: For handling multiple client connections concurrently.
+
+
+
+
